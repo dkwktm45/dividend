@@ -36,9 +36,9 @@ public class TokenProvider {
 
     return Jwts.builder()
         .setClaims(claims)
-        .setIssuedAt(now) // 토큰 생성 시간
-        .setExpiration(expriedDate) // 토큰 만료 시간
-        .signWith(SignatureAlgorithm.HS512, this.securetKey) // 사용할 암호화 알고리즘,비밀키
+        .setIssuedAt(now)
+        .setExpiration(expriedDate)
+        .signWith(SignatureAlgorithm.HS512, this.securetKey)
         .compact();
   }
 
@@ -48,7 +48,7 @@ public class TokenProvider {
         userDetails.getAuthorities());
   }
   public String getUserName(String token) {
-    return parseClaims(token).getSubject(); // getSubject 이름 가져옴
+    return parseClaims(token).getSubject();
   }
 
   public boolean vaildateToken(String token) {

@@ -24,7 +24,7 @@ public class ScraperScheduler {
   private final CompanyRepository companyRepository;
   private final Scraper yahooFinanceScraper;
   private final DividendRepository dividendRepository;
-  @CacheEvict(value = CacheKey.KEY_FINANCE,allEntries = true)
+  @CacheEvict(value = CacheKey.KEY_FINANCE , allEntries = true)
   @Scheduled(cron = "${scheduler.scrap.yahoo}")
   public void yahooFinaceScheduling() {
     log.info("scraping scheduler is started");

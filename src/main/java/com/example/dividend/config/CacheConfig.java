@@ -25,7 +25,6 @@ public class CacheConfig {
 
   @Bean
   public CacheManager redisCacheManager(RedisConnectionFactory redisConnectionFactory) {
-    // 직렬화 지정
     RedisCacheConfiguration conf = RedisCacheConfiguration.defaultCacheConfig()
         .serializeKeysWith(RedisSerializationContext.SerializationPair.fromSerializer(new StringRedisSerializer()))
         .serializeValuesWith(RedisSerializationContext.SerializationPair.fromSerializer(new GenericJackson2JsonRedisSerializer()))

@@ -15,15 +15,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-/**
- * OncePerRequestFilter : Spring 동작을 걸칠때마다 요청에 token이 있는지를 확인하기 위함
- * */
+
 @Slf4j
 @Component
 @RequiredArgsConstructor
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
   public static final String TOKEN_HEADER = "Authorization";
-  // jwt token에 통상적으로 Bearer라는 prefix를 붙임
   public static final String TOKEN_PREFIX = "Bearer ";
   private final TokenProvider tokenProvider;
   @Override
