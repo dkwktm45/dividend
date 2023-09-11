@@ -1,0 +1,18 @@
+### 회원가입
+POST http://localhost:8081/auth/signup
+Content-Type: application/json
+
+{
+  "username" : "LeeJin",
+  "password" : "dkwktm45",
+  "roles" : ["ROLE_READ", "ROLE_WRITE"]
+}
+
+### 로그인
+POST http://localhost:8081/auth/signin
+Content-Type: application/json
+
+{
+  "username" : "LeeJin",
+  "password" : "dkwktm45"
+}

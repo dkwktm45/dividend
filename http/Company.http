@@ -1,0 +1,21 @@
+### 회사 저장
+POST http://localhost:8081/comapny
+Content-Type: application/json
+
+{
+  "ticker": "COKE"
+}
+
+### 모든 회사 조회
+GET http://localhost:8081/comapny
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJMZWVKaW4iLCJyb2xlcyI6WyJST0xFX1JFQUQiLCJST0xFX1dSSVRFIl0sImlhdCI6MTY5MzMwMjI2MiwiZXhwIjoxNjkzMzA1ODYyfQ.bBy3w-zi2VlcHsuSZxSOvy-B0KhpST0BW9ghV7mZnDQFVNk1IxM-aEj_blJ74Uy2pqWkvBu7kHwEJiUYZs2Thw
+Accept: application/json
+
+### 자동완성 기능
+GET http://localhost:8081/comapny/autocomplete?keyword=C
+Accept: application/json
+
+### 자동완성 기능
+DELETE http://localhost:8081/comapny/MMM
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJMZWVKaW4iLCJyb2xlcyI6WyJST0xFX1JFQUQiLCJST0xFX1dSSVRFIl0sImlhdCI6MTY5MzMwMjI2MiwiZXhwIjoxNjkzMzA1ODYyfQ.bBy3w-zi2VlcHsuSZxSOvy-B0KhpST0BW9ghV7mZnDQFVNk1IxM-aEj_blJ74Uy2pqWkvBu7kHwEJiUYZs2Thw
+Accept: application/json

@@ -1,0 +1,3 @@
+### 회사 배당금 정보 조회
+GET http://localhost:8081/finance/dividend/Coca-Cola Consolidated, Inc.
+Accept: application/json
